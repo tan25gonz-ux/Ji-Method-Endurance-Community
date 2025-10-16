@@ -11,6 +11,15 @@
   <script src="https://kit.fontawesome.com/a2e0e6f939.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- === PRELOADER === -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="Imagenes/Logo.jpeg" alt="Logo Ji-Method" class="preloader-logo">
+      <h2>Ji-Method</h2>
+      <p>Endurance Community</p>
+    </div>
+  </div>
+
   <!-- === NAVBAR === -->
   <header class="navbar">
     <div class="logo">
@@ -47,18 +56,25 @@
   <!-- === EVENTOS === -->
   <section id="events" class="section">
     <h2 data-animate>Próximos Eventos</h2>
-    <div id="event-list" class="card-container" data-animate>
-      <!-- Eventos cargados desde Supabase -->
-    </div>
+    <div id="event-list" class="card-container" data-animate></div>
   </section>
 
   <!-- === GALERÍA === -->
   <section id="gallery" class="section">
     <h2 data-animate>Galería</h2>
     <div id="gallery-grid" class="gallery-grid" data-animate>
-      <!-- Fotos cargadas desde Supabase -->
+      <img src="Imagenes/Fondo.jpeg" alt="Entrenamiento 1">
+      <img src="Imagenes/Logo.jpeg" alt="Logo Ji-Method">
+      <img src="https://placehold.co/400x300" alt="Carrera 10K">
+      <img src="https://placehold.co/400x300" alt="Entrenamiento grupal">
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Vista ampliada" />
+  </div>
 
   <!-- === CONTACTO === -->
   <section id="contact" class="section">
@@ -66,12 +82,10 @@
     <p data-animate>¡Únete a nuestra comunidad y corre con nosotros!</p>
     <div class="socials" data-animate>
       <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="#" target="_blank"><i class="fab fa-strava"></i> Strava</a>
       <a href="#" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </section>
 
-  <!-- === FOOTER === -->
   <footer>
     <p>© 2025 Ji-Method Endurance Community. Todos los derechos reservados.</p>
   </footer>
