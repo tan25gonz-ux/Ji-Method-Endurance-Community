@@ -1,34 +1,35 @@
-// === Ji-Method Web con Supabase ===
-// (Cargar eventos y galería)
+// Animaciones suaves al hacer scroll
+const elements = document.querySelectorAll("[data-animate]");
+const onScroll = () => {
+  elements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+      el.classList.add("visible");
+    }
+  });
+};
+window.addEventListener("scroll", onScroll);
+onScroll();
 
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+// Cambiar navbar al hacer scroll
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
 
-const SUPABASE_URL = "TU_SUPABASE_URL";
-const SUPABASE_KEY = "TU_SUPABASE_ANON_KEY";
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
-// Cargar eventos
-async function cargarEventos() {
-  const { data, error } = await supabase.from("eventos").select("*").order("fecha", { ascending: true });
-  const contenedor = document.getElementById("event-list");
-  if (error) return console.error(error);
-  contenedor.innerHTML = data.map(e => `
-    <div class="event-card">
-      <img src="${e.imagen_url || 'https://placehold.co/300x200'}" alt="">
-      <h3>${e.titulo}</h3>
-      <p>${e.descripcion}</p>
-      <small>${new Date(e.fecha).toLocaleDateString()}</small>
-    </div>
-  `).join("");
-}
-
-// Cargar galería
-async function cargarGaleria() {
-  const { data, error } = await supabase.from("galeria").select("*").order("creado_en", { ascending: false });
-  const grid = document.getElementById("gallery-grid");
-  if (error) return console.error(error);
-  grid.innerHTML = data.map(f => `<img src="${f.imagen_url}" alt="${f.titulo}">`).join("");
-}
-
-cargarEventos();
-cargarGaleria();
+// Ejemplo: carga de eventos (se puede conectar luego a Supabase)
+const contenedorEventos = document.getElementById("event-list");
+contenedorEventos.innerHTML = `
+  <div class="event-card">
+    <img src="https://placehold.co/300x200" alt="Evento 1">
+    <h3>Entrenamiento Dominical</h3>
+    <p>Reunión semanal en el parque para todos los niveles.</p>
+    <small>20 Octubre 2025</small>
+  </div>
+  <div class="event-card">
+    <img src="https://placehold.co/300x200" alt="Evento 2">
+    <h3>Carrera Solidaria 10K</h3>
+    <p>Evento benéfico para apoyar la salud y el deporte.</p>
+    <small>27 Octubre 2025</small>
+  </div>
+`;
