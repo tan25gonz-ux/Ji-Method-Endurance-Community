@@ -67,10 +67,10 @@ nav a {
 }
 nav a:hover { color: var(--accent); }
 
-/* === HERO (IMAGEN DE FONDO REAL) === */
+/* === HERO (IMAGEN DE FONDO .JPEG) === */
 .hero {
   height: 100vh;
-  background: url("Imagenes/Fondo.jepg") center center/cover no-repeat;
+  background: url("Imagenes/Fondo.jpeg") center center/cover no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
