@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ji-Method - Endurance Community</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Imagenes/Logo.jpeg" type="image/png" />
   <script type="module" src="main.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e0e6f939.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- === HEADER === -->
+  <!-- === NAVBAR === -->
   <header class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Logo Ji-Method">
+      <img src="Imagenes/Logo.jpeg" alt="Logo Ji-Method" />
       <h1>Ji-Method</h1>
     </div>
     <nav>
@@ -27,16 +29,16 @@
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h2>Endurance Community</h2>
-      <p>Unidos por la pasión de correr</p>
-      <a href="#events" class="btn">Ver Próximos Eventos</a>
+      <h2 data-animate>Endurance Community</h2>
+      <p data-animate>Unidos por la pasión de correr</p>
+      <a href="#events" class="btn" data-animate>Ver Próximos Eventos</a>
     </div>
   </section>
 
   <!-- === QUIÉNES SOMOS === -->
   <section id="about" class="section">
-    <h2>Quiénes Somos</h2>
-    <p>
+    <h2 data-animate>Quiénes Somos</h2>
+    <p data-animate>
       Ji-Method es una comunidad de corredores apasionados por la resistencia, el esfuerzo y la superación personal.
       Nos unimos para entrenar, competir y disfrutar del camino juntos, siempre con buena energía y compañerismo.
     </p>
@@ -44,25 +46,25 @@
 
   <!-- === EVENTOS === -->
   <section id="events" class="section">
-    <h2>Próximos Eventos</h2>
-    <div id="event-list" class="card-container">
+    <h2 data-animate>Próximos Eventos</h2>
+    <div id="event-list" class="card-container" data-animate>
       <!-- Eventos cargados desde Supabase -->
     </div>
   </section>
 
   <!-- === GALERÍA === -->
   <section id="gallery" class="section">
-    <h2>Galería</h2>
-    <div id="gallery-grid" class="gallery-grid">
+    <h2 data-animate>Galería</h2>
+    <div id="gallery-grid" class="gallery-grid" data-animate>
       <!-- Fotos cargadas desde Supabase -->
     </div>
   </section>
 
   <!-- === CONTACTO === -->
   <section id="contact" class="section">
-    <h2>Contacto</h2>
-    <p>¡Únete a nuestra comunidad y corre con nosotros!</p>
-    <div class="socials">
+    <h2 data-animate>Contacto</h2>
+    <p data-animate>¡Únete a nuestra comunidad y corre con nosotros!</p>
+    <div class="socials" data-animate>
       <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
       <a href="#" target="_blank"><i class="fab fa-strava"></i> Strava</a>
       <a href="#" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -73,8 +75,5 @@
   <footer>
     <p>© 2025 Ji-Method Endurance Community. Todos los derechos reservados.</p>
   </footer>
-
-  <!-- Íconos de redes -->
-  <script src="https://kit.fontawesome.com/a2e0e6f939.js" crossorigin="anonymous"></script>
 </body>
 </html>
