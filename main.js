@@ -23,13 +23,13 @@ contenedorEventos.innerHTML = `
   <div class="event-card">
     <img src="https://placehold.co/300x200" alt="Evento 1">
     <h3>Entrenamiento Dominical</h3>
-    <p>Reunión semanal en el parque para todos los niveles.</p>
+    <p>Reunión semanal en el parque Turrialba.</p>
     <small>20 Octubre 2025</small>
   </div>
   <div class="event-card">
     <img src="https://placehold.co/300x200" alt="Evento 2">
     <h3>Carrera Solidaria 10K</h3>
-    <p>Evento benéfico para apoyar la salud y el deporte.</p>
+    <p>Evento 2.</p>
     <small>27 Octubre 2025</small>
   </div>
 `;
